@@ -33,26 +33,8 @@
 </head>
 
 <body>
-
-<header class="navigation">
-  <div class="container-sm">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-      <a class=navbar-brand href="index.html"><img class="img-fluid" src="images/logo.png" alt="repaircomp"></a>
-      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
-        <i class="ti-align-right h4 text-dark"></i></button>
-      <div class="collapse navbar-collapse text-center" id=navigation>
-        <ul class="navbar-nav mx-auto align-items-center">
-          <li class="nav-item"><a class="btn btn-sm btn-outline-primary ml-lg-4" href="http://program-repair.org/">Program&nbsp;Repair</a></li>
-          <li class="nav-item"><a class="btn btn-sm btn-outline-primary ml-lg-4" href="http://program-repair.org/workshop-2023/">APR&nbsp;Workshop</a></li>
-        </ul>
-
-        <a href="changelog.html" class="btn btn-sm btn-outline-primary ml-lg-4">news</a>
-        <a href="contact.html" class="btn btn-sm btn-outline-primary ml-lg-4">contact</a>
-      </div>
-
-    </nav>
-  </div>
-</header>
+<!-- header -->
+<div w3-include-html="header.html"></div>
 
 <!-- details page -->
 <section class="pt-5">
@@ -61,58 +43,77 @@
       <!-- sidebar -->
       <div class="col-lg-3">
         <ul class="sidenav">
-          <li title="about repair-comp" class="sidelist parent active">
-            <a href="list.html">Home</a>
+          <li title="about repair-comp" class="sidelist">
+            <a href="index.html">Overview</a>
           </li>
 
           <li class="sidelist">
-            <a href="list.html">Important Dates</a>
+            <a href="dates.html">Important Dates</a>
           </li>
 
           <li class="sidelist">
-            <a href="list.html">Competition Rules</a>
+            <a href="rules.html">Competition Rules</a>
           </li>
 
           <li class="sidelist">
-            <a href="list.html">Submission</a>
+            <a href="submission.html">Submission</a>
           </li>
 
           <li class="sidelist">
-            <a href="tracks.html">Repair Tracks</a>
+            <a href="tracks.html">Competition Tracks</a>
           </li>
 
           <li class="sidelist">
-            <a href="list.html">Participants</a>
+            <a href="specs.html">Specifications</a>
           </li>
+
           <li class="sidelist">
-            <a href="list.html">Organizers</a>
+            <a href="organizers.html">Organizers</a>
+          </li>
+
+          <li class="sidelist parent active">
+            <a href="participants.html">Participants</a>
           </li>
         </ul>
       </div>
 
       <!-- main -->
-      <div class="col-lg-9">
+      <div class="col-lg-8">
         <div class="container">
+          <h2 class="section-title">Participating Teams</h2>
+          <hr>
           <div class="row justify-content-between align-items-center">
-            <div class="col-lg-6 d-lg-block d-none text-lg-center">
-              <img src="images/banner.png" alt="illustration" class="img-fluid">
-            </div>
-            <div class="col-lg-6 text-center text-lg-left">
-              <h3 class="mb-4">1<sup>st</sup> International Competition on</h3>
-              <h2 class="mb-4">Automated Program Repair</h2>
-              <p class="mb-4">shaping the next generation of automated program repair technology  </p>
-            </div>
 
-            <p>
-              In this work, we presented Retrieval Augmented Prompt Generation (RAPGen), a novel prompt engineering approach for fixing
-              performance bugs using LLMs. RAPGen uses past performance fixes
-              to construct a knowledge-base instructions encoding the changes
-              made within these fixes. When given a code snippet with a performance issue and the corresponding expensive line, RAPGen
-              leverages this knowledge-base to construct a prompt and generates
-              fixes using LLMs, like Codex, in zero-shot. Being zero-shot and
-              entirely prompt-driven enables RAPGen to leverage the capabilities
-              of LLMs for Code (such as Codex) without the cost of fine-tuning
-            </p>
+            <table class="table caption-top">
+              <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -129,25 +130,9 @@
 
 
 
-<footer>
-  <div class="container">
-    <div class="row align-items-center border-bottom py-5">
+<!-- footer -->
+<div w3-include-html="footer.html"></div>
 
-      <div class="col-lg-7 text-center mb-4 mb-lg-0">
-        <ul class="list-inline social-icons text-lg-right text-center">
-          <li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="ti-twitter-alt"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="ti-github"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
-        </ul>
-      </div>
-
-    </div>
-    <div class="py-4 text-center">
-      <small class="text-light">Copyright © 2023  <a href="https://nus-tss.github.io/">Trustworthy and Secure Software</a> group at NUS</small>
-    </div>
-  </div>
-</footer>
 
 <!-- plugins -->
 <script src="plugins/jQuery/jquery.min.js"></script>
@@ -158,6 +143,12 @@
 
 <!-- Main Script -->
 <script src="js/script.js"></script>
+<script>
+  includeHTML();
+</script>
+<script>
+  includeHTML();
+</script>
 
 </body>
 </html>

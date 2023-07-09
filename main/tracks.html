@@ -26,7 +26,6 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
   <!-- Bootstrap Font Icon CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
@@ -36,6 +35,7 @@
 
 <!-- header -->
 <div w3-include-html="header.html"></div>
+
 
 <!-- details page -->
 <section class="pt-5">
@@ -60,111 +60,87 @@
             <a href="submission.html">Submission</a>
           </li>
 
-          <li class="sidelist">
-            <a href="tracks.html">Competition Tracks</a>
+          <li  class="sidelist parent active">
+            <a href="#">Competition Tracks</a>
+            <ul>
+              <li class="sidelist">
+                <a href="logic.html">Functional Errors</a>
+              <li class="sidelist">
+                <a href="vulnerabilities.html">Security Vulnerabilities</a>
+              <li class="sidelist">
+                <a href="assignments.html">Student Assignments</a>
+              <li class="sidelist">
+                <a href="ai.html">AI Generated Code</a>
+            </ul>
           </li>
-
           <li class="sidelist">
             <a href="specs.html">Specifications</a>
           </li>
 
-          <li class="sidelist parent active">
+          <li class="sidelist">
             <a href="organizers.html">Organizers</a>
           </li>
         </ul>
       </div>
 
-      <!-- main -->
-      <div class="col-lg-9">
+      <!-- body -->
+      <div class="col-lg-8">
         <div class="container">
-          <h2 class="section-title">Organizing Committee</h2>
+          <h2 class="section-title">Competition Tracks</h2>
           <hr>
-          <div class="row justify-content-between align-items-center">
-
-            <div class="card col-lg-5 m-md-3">
-              <a href="https://abhikrc.com/">
+          <div class="row">
+            <!-- topic -->
+            <div class="col-lg-6 col-md-4 col-sm-6 mb-4">
+              <div class="card match-height">
                 <div class="card-body">
-                  <h6 class="card-title">Abhik Roychoudhury (PI)</h6>
-                  <p class="card-text">Provost's Chair Professor<br>National University of Singapore</p><br>
+                  <i class="card-icon bi bi-bug-fill mb-4"></i>
+                  <h3 class="card-title h4">Functional<br> Errors</h3>
+                  <p class="card-text">fix functional errors in large scale real world software</p>
+                  <a href="logic.html" class="stretched-link"></a>
                 </div>
-              </a>
-            </div>
-
-            <div class="card col-lg-5 m-md-3">
-              <a href="https://rshariffdeen.com">
-              <div class="card-body">
-                <h6 class="card-title">Ridwan Shariffdeen (Chair)</h6>
-                <p class="card-text">Research Fellow<br>National University of Singapore</p><br>
               </div>
-              </a>
             </div>
-
-            <div class="card col-lg-5 m-md-3">
-              <a href="https://yannicnoller.github.io/">
+            <!-- topic -->
+            <div class="col-lg-6 col-md-4 col-sm-6 mb-4">
+              <div class="card match-height">
                 <div class="card-body">
-                  <h6 class="card-title">Yannic Noller</h6>
-                  <p class="card-text">Research Assistant Professor<br>National University of Singapore</p><br>
+                  <i class="card-icon bi-shield-shaded mb-4" style="display: inline-block"></i>
+                  <h3 class="card-title h4">Security Vulnerabilities</h3>
+                  <p class="card-text">patch vulnerable software ensuring vulnerability protection  </p>
+                  <a href="vulnerabilities.html" class="stretched-link"></a>
                 </div>
-              </a>
-            </div>
-
-
-            <div class="card col-lg-5 m-md-3">
-              <a href="https://www.comp.nus.edu.sg/~gregory/">
-                <div class="card-body">
-                  <h6 class="card-title">Gregory James Duck</h6>
-                  <p class="card-text">Research Assistant Professor<br>National University of Singapore</p><br>
-                </div>
-              </a>
-            </div>
-
-            <div class="card col-lg-5 m-md-3">
-              <a href="https://www.comp.nus.edu.sg/~andreeac">
-                <div class="card-body">
-                  <h6 class="card-title">Andreea Costa</h6>
-                  <p class="card-text">Senior Research Fellow<br>National University of Singapore</p><br>
-                </div>
-              </a>
-            </div>
-
-          </div>
-
-          <h2 class="section-title m-md-3">Technical Support</h2>
-          <hr>
-          <div class="row justify-content-between align-items-center">
-          <div class="card col-lg-5 m-md-3">
-            <a href="https://www.linkedin.com/in/martin-mirchev-2203">
-              <div class="card-body">
-                <h6 class="card-title">Martin Mirchev</h6>
-                <p class="card-text">PhD Student<br>National University of Singapore</p><br>
               </div>
-            </a>
-          </div>
-
-          <div class="card col-lg-5 m-md-3">
-            <a href="#">
-              <div class="card-body">
-                <h6 class="card-title">Arsalan Cheema</h6>
-                <p class="card-text">Research Assistant<br>National University of Singapore</p><br>
+            </div>
+            <!-- topic -->
+            <div class="col-lg-6 col-md-4 col-sm-6 mb-4">
+              <div class="card match-height">
+                <div class="card-body">
+                  <i class="card-icon bi bi-file-code-fill mb-4"></i>
+                  <h3 class="card-title h4">Student Assignments</h3>
+                  <p class="card-text">generate feedback for programming assignments</p>
+                  <a href="assignments.html" class="stretched-link"></a>
+                </div>
               </div>
-            </a>
-          </div>
+            </div>
+            <!-- topic -->
+            <div class="col-lg-6 col-md-4 col-sm-6 mb-4">
+              <div class="card match-height">
+                <div class="card-body">
+                  <i class="card-icon bi bi-robot mb-4"></i>
+                  <h3 class="card-title h4">AI <br>Generated Code</h3>
+                  <p class="card-text">repair errors in code generated by artificial intelligence</p>
+                  <a href="ai.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        </div>
-
-
       </div>
-
-
     </div>
   </div>
 </section>
+
 <!-- /details page -->
-
-
-
 <!-- footer -->
 <div w3-include-html="footer.html"></div>
 
@@ -181,6 +157,5 @@
 <script>
   includeHTML();
 </script>
-
 </body>
 </html>

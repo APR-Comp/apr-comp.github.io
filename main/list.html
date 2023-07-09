@@ -30,32 +30,9 @@
 </head>
 
 <body>
+<!-- header -->
+<div w3-include-html="header.html"></div>
 
-<header class="sticky-top navigation">
-  <div class=container>
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-      <a class=navbar-brand href="index.html"><img class="img-fluid" src="images/logo.png" alt="godocs"></a>
-      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
-        <i class="ti-align-right h4 text-dark"></i></button>
-      <div class="collapse navbar-collapse text-center" id=navigation>
-        <ul class="navbar-nav mx-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="search.html">Search Page</a></li>
-        </ul>
-        <form class="form-inline search-wrapper d-none d-lg-block" class="search-wrapper" action="search.html">
-          <input id="search-by" name="s" type="search" class="form-control" placeholder="Search here ...">
-          <button class="border-0 bg-white" type="submit"><i class="ti-search"></i></button>
-        </form>
-        <a href="changelog.html" class="btn btn-sm btn-outline-primary ml-lg-4">changelog</a>
-        <a href="contact.html" class="btn btn-sm btn-primary ml-lg-4">contact</a>
-      </div>
-      <form class="form-inline search-wrapper d-block d-lg-none my-3" class="search-wrapper" action="search.html">
-        <input id="search-by" name="s" type="search" class="form-control" placeholder="Search here ...">
-        <button class="border-0 bg-white" type="submit"><i class="ti-search"></i></button>
-      </form>
-    </nav>
-  </div>
-</header>
 
 <!-- details page -->
 <section class="pt-5">
@@ -64,7 +41,7 @@
       <!-- sidebar -->
       <div class="col-lg-3">
         <ul class="sidenav">
-          <li title="Basic Startup" class="sidelist parent active">
+          <li  class="sidelist parent active">
             <a href="list.html">Basic Startup</a>
             <ul>
               <li class="sidelist">
@@ -153,35 +130,9 @@
 </section>
 <!-- /details page -->
 
-<footer>
-  <div class="container">
-    <div class="row align-items-center border-bottom py-5">
-      <div class="col-lg-4">
-        <ul class="list-inline footer-menu text-center text-lg-left">
-          <li class="list-inline-item"><a href="changelog.html">Changelog</a></li>
-          <li class="list-inline-item"><a href="contact.html">contact</a></li>
-          <li class="list-inline-item"><a href="search.html">Search</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-4 text-center mb-4 mb-lg-0">
-        <a class="navbar-brand" href="index.html">
-          <img class="img-fluid" src="images/logo.png" alt="Hugo documentation theme">
-        </a>
-      </div>
-      <div class="col-lg-4">
-        <ul class="list-inline social-icons text-lg-right text-center">
-          <li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="ti-twitter-alt"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="ti-github"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="py-4 text-center">
-      <small class="text-light">Copyright © 2023  <a href="https://nus-tss.github.io/">Trustworthy and Secure Software</a> group at NUS</small>
-    </div>
-  </div>
-</footer>
+
+<!-- footer -->
+<div w3-include-html="footer.html"></div>
 
 <!-- plugins -->
 <script src="plugins/jQuery/jquery.min.js"></script>
@@ -192,6 +143,9 @@
 
 <!-- Main Script -->
 <script src="js/script.js"></script>
+<script>
+  includeHTML();
+</script>
 
 </body>
 </html>
