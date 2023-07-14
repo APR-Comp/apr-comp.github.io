@@ -11,7 +11,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>RepairComp 2023 - International Competition on Automated Program Repair</title>
+  <title>RepairComp 2024 - International Competition on Automated Program Repair</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -51,18 +51,27 @@
             <a href="dates.html">Important Dates</a>
           </li>
 
-          <li class="sidelist e">
+          <li class="sidelist">
+            <a href="jury.html">Competition Jury</a>
+          </li>
+
+          <li class="sidelist">
             <a href="rules.html">Competition Rules</a>
           </li>
 
-          <li class="sidelist parent active">
-            <a href="submission.html">Submission</a>
-          </li>
+
 
           <li class="sidelist">
             <a href="tracks.html">Competition Tracks</a>
           </li>
 
+           <li class="sidelist parent active">
+          <a href="submission.html">Submission</a>
+           </li>
+
+          <li class="sidelist">
+            <a href="evaluation.html">Evaluation</a>
+          </li>
 
 
           <li class="sidelist">
@@ -79,7 +88,38 @@
               <h2 class="section-title">Submission</h2>
               <hr>
               <div class="container">
-                <p>Submission Details</p>
+                <p>
+                  In order to participate in the competition, all teams need to submit the following artifacts:
+                </p>
+                <ol>
+                  <li>Express your interest to participate <a class="btn-link" href="https://forms.gle/HW6jfzHZGDTfmkF7A">here</a></li>
+                  <li>Submit a pull request (PR) by <a class="btn-link" href="https://github.com/nus-apr/cerberus/fork">forking</a> Cerberus
+                    and <a class="btn-link" href="https://github.com/nus-apr/cerberus/compare">submitting</a> a PR. The PR must be accepted
+                    at <a class="btn-link" href="https://github.com/nus-apr/cerberus">Cerberus</a> by the deadline (see <a class="btn-link" href="dates.html">Important Dates</a>).
+                    Your PR should consist of the following:
+                      <ol>
+                        <li>driver for the repair tool (see <a class="btn-link" href="https://github.com/nus-apr/cerberus/blob/master/doc/tool/RepairTool.md">example</a>)</li>
+                        <li>the driver should specify the docker image name (including the tag) to a docker image hosted at <a class="btn-link" href="https://hub.docker.com/">DockerHub</a> and the hash of the image</li>
+                      </ol>
+                  </li>
+                  <li>
+                    Submit a short “tool paper” via the RepairComp submission site on EasyChair (up to 2 pages in IEEE conference format; <code>\documentclass[10pt,conference]{IEEEtran}</code> without including the <code>compsoc</code> or <code>compsocconf</code> options) with following information:
+
+                  <ol>
+                    <li>describing the tool, including an outline of the concepts, technology, libraries, and tool infrastructure used in the competition</li>
+                    <li>contact info (web page of the project, people involved in the project)</li>
+                    <li>information about the software project, licensing, development model, institution that hosts the software project, acknowledgement of contributors</li>
+                    <li>publish (e.g., on Zenodo) your tool archive and reference it here (via DOI) to ensure reproducibility, also provide the URL of the project web site and repository for the source code including the build instructions</li>
+                    <li>include the link to a pre-built docker image hosted at DockerHub and hash of the tool image</li>
+                    <li>the integration of the repair tool (i.e., the competition candidate) into the competition platform, submitted as a Pull Request to <a class="btn-link" href="https://github.com/nus-apr/cerberus">Cerberus</a></li>
+                    <li>the selection of competition tracks for which the submitted repair tool will compete for</li>
+                    <li>the denomination of a team member who will serve in the <a class="btn-link" href="jury.html">Jury Committee</a></li>
+                    <li> [if the team members are not the original authors of the tool] the clarification of why the team is participating with the tool from someone else. This clarification should include the agreement by the original author or (if the tool represents an extension of another tool) the explanation of the extension</li>
+                    <li>bibliographic references to more in-depth papers about the approaches used in the tool</li>
+                  </ol>
+                  </li>
+                </ol>
+
               </div>
             </div>
           </div>

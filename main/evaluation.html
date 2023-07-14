@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>RepairComp 2024 - International Competition on Automated Program Repair</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- plugins -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+<!-- header -->
+<div w3-include-html="header.html"></div>
+
+<!-- details page -->
+<section class="pt-5">
+  <div class="container shadow section-sm rounded">
+    <div class="row">
+      <!-- sidebar -->
+      <div class="col-lg-3">
+        <ul class="sidenav">
+          <li title="about repair-comp" >
+            <a href="index.html">Overview</a>
+          </li>
+
+          <li class="sidelist ">
+            <a href="dates.html">Important Dates</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="jury.html">Competition Jury</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="rules.html">Competition Rules</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="tracks.html">Competition Tracks</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="submission.html">Submission</a>
+          </li>
+
+          <li class="sidelist parent active">
+            <a href="submission.html">Evaluation</a>
+          </li>
+
+
+
+
+
+          <li class="sidelist">
+            <a href="organizers.html">Organizers</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- main -->
+      <div class="col-lg-9">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10">
+              <h2 class="section-title">Evaluation</h2>
+              <hr>
+              <div class="container">
+                <p>
+                  This page describes the assessment criteria for scoring each repair tool per repair task. The competition
+                  evaluates on three aspects the efficacy, response time and resource usage.
+                </p>
+
+                <h4>Efficacy Assessment</h4>
+                <p>
+                Each tool will be executed for each track they have registered with,
+                for each repair task the tool will generate at most 5 patches in unified diff format which can
+                be applied to the original program. Each patch will be applied to the original program and
+                executed against following set of test suites:
+                </p>
+                <ul>
+                  <li><b>Public Test Suite</b><br>test cases that are provided to the tool with the repair tasks</li>
+                  <li><b>Private Test Suite</b><br>we generate additional test cases using the reference program (deemed correct version) which are not provided to the repair tool during the repair process</li>
+                  <li><b>Adversarial Test Suite</b><br>during the rebuttal phase competing teams can provide additional test-cases to invalidate competing team patches, we curate a set of test cases from each participating team</li>
+                </ul>
+
+                <br>
+
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th scope="col">Label</th>
+                    <th scope="col">Build Success</th>
+                    <th scope="col">Public Tests</th>
+                    <th scope="col">Private Tests</th>
+                    <th scope="col">Adversarial Tests</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <th scope="row">Invalid</th>
+                    <td>failed</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Incorrect</th>
+                    <td>success</td>
+                    <td>failed</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Over-fitting</th>
+                    <td>success</td>
+                    <td>success</td>
+                    <td>failed</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Correct</th>
+                    <td>success</td>
+                    <td>success</td>
+                    <td>success</td>
+                    <td>failed</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">High Quality</th>
+                    <td>success</td>
+                    <td>success</td>
+                    <td>success</td>
+                    <td>success</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <h4>Response Time Assessment</h4>
+                <p>
+                  For each repair task we capture the minimum time taken to produce a result to the user.
+                  A result can be of two formats, generating a plausible patch or an output stating cannot find a patch.
+                </p>
+
+
+                <h4>Resource Usage Assessment</h4>
+                <p>
+                  For each repair task the memory usage, cpu usage and gpu usage to produce a result
+                  is captured and will be used to evaluate the efficiency of the tool.
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!-- /details page -->
+
+
+
+<!-- footer -->
+<div w3-include-html="footer.html"></div>
+
+
+<!-- plugins -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/masonry/masonry.min.js"></script>
+<script src="plugins/clipboard/clipboard.min.js"></script>
+<script src="plugins/match-height/jquery.matchHeight-min.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+<script>
+  includeHTML();
+</script>
+
+</body>
+</html>
