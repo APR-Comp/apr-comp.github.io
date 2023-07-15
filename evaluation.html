@@ -94,7 +94,7 @@
                   evaluates on three aspects the efficacy, response time and resource usage.
                 </p>
 
-                <h4>Efficacy Assessment</h4>
+                <h5>Efficacy Assessment</h5>
                 <p>
                 Each tool will be executed for each track they have registered with,
                 for each repair task the tool will generate at most 5 patches in unified diff format which can
@@ -158,17 +158,31 @@
                   </tbody>
                 </table>
 
-                <h4>Response Time Assessment</h4>
+                <h5>Response Time Assessment</h5>
                 <p>
                   For each repair task we capture the minimum time taken to produce a result to the user.
                   A result can be of two formats, generating a plausible patch or an output stating cannot find a patch.
                 </p>
 
 
-                <h4>Resource Usage Assessment</h4>
+                <h5>Resource Usage Assessment</h5>
                 <p>
                   For each repair task the memory usage, cpu usage and gpu usage to produce a result
                   is captured and will be used to evaluate the efficiency of the tool.
+                </p>
+
+                <h4>Scoring Criteria</h4>
+                <p>
+                  For each task, we aim to offer the highest reward to those tools which prioritize the generation
+                  of only correct and high quality solutions. To this purpose we shall penalize invalid, incorrect,
+                  and over-fitting patches.
+                </p>
+
+                <h4>Ranking Criteria</h4>
+                <p>
+                  For each track, the candidate tools are ranked according to the total score per track.
+                  Candidates with the same score are further differentiated according to the Response Time.
+                  In case there is still a tie, we can further differentiate according to their Resource Usage Footprint.
                 </p>
 
               </div>
