@@ -21,7 +21,7 @@
 
   <!-- Latest compiled JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+  
   <!-- ** Plugins Needed for the Project ** -->
   <!-- plugins -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
@@ -31,6 +31,7 @@
 
   <!-- Bootstrap Font Icon CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 
 
   <!--Favicon-->
@@ -69,26 +70,28 @@
 
 
           <li class="sidelist parent active">
-            <a href="list.html">Competition Tracks</a>
+            <a href="tracks.html">Competition Tracks</a>
             <ul>
-              <li class="sidelist">
-                <a href="logic.html">Functional Errors</a>
+              <li class="sidelist parent active">
+                <a href="#">Functional Errors</a>
               <li class="sidelist">
                 <a href="vulnerabilities.html">Security Vulnerabilities</a>
               <li class="sidelist">
                 <a href="assignments.html">Student Assignments</a>
-              <li class="sidelist parent active">
-                <a href="#">AI Generated Code</a>
+              <li class="sidelist">
+                <a href="ai.html">AI Generated Code</a>
             </ul>
           </li>
 
-            <li class="sidelist">
-                <a href="submission.html">Submission</a>
-            </li>
 
-            <li class="sidelist">
-                <a href="evaluation.html">Evaluation</a>
-            </li>
+          <li class="sidelist">
+            <a href="submission.html">Submission</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="evaluation.html">Evaluation</a>
+          </li>
+
           <li class="sidelist">
             <a href="organizers.html">Organizers</a>
           </li>
@@ -99,12 +102,12 @@
       <div class="col-lg-8">
         <div class="px-lg-5 px-4">
           <h4 class="mb-4 font-weight-medium">Competition Track</h4>
-          <h2 class="mb-4 font-weight-medium">AI Generated Code</h2>
+          <h2 class="mb-4 font-weight-medium">Functional Errors</h2>
           <!-- main content -->
           <div class="content">
             <p>
-              This track is focused on fixing incorrectly generated code by CodeX for general algorithmic problems curated in <a href="https://leetcode.com/">LeetCode</a> .
-              Repair tools will be fixing LLM generated code which fails on provided test cases.
+              This track is focused on fixing functional correctness errors in real-world software programs.
+              Repair tools will be fixing bugs with a failing test-case, accompanied by a set of passing test cases from a real-world application.
             </p>
 
             <p>
@@ -129,31 +132,32 @@
 
     Processor: Intel(R) Xeon(R) Platinum 8468V CPU @ 2.40GHz
     Cache: 97.5 MB
-    Number of Cores: 4
-    Memory: 32 GB
-    GPU: 1 x NVIDIA A40 GPU (48 GB GDDR6 RAM)
-    Time Duration: 15 minutes
+    Number of Cores: 8
+    Memory: 64 GB
+    GPU: 2 x NVIDIA A40 GPU (48 GB GDDR6 RAM)
+    Time Duration: 1 hour
                   </pre>
 
 
             <h4>Sub Tracks</h4>
 
             <p>
-              The first edition of APR-Comp will target the two most widely used programming languages according to <a href="https://octoverse.github.com/2022/top-programming-languages">GitHub</a>
+              The first edition of APR-Comp will target the two most widely supported programming languages, for logical error repair.
+
             </p>
 
             <div class="accordion accordion-flush" id="accordionFlushExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    JavaScript
+                    C/C++
                   </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
-                    Benchmark programs will be generated from <a href="https://openai.com/blog/openai-codex">CodeX</a>.
-                    <br><b>Time Duration:</b> 15 minutes
-                    <br><b>Input to Repair:</b> LLM generated code, task description, test suite (with at least one failing)
+                    Benchmark programs will be selected from <a href="http://repairbenchmarks.cs.umass.edu/">ManyBugs</a> and <a href="https://dbgbench.github.io/">DBGBench</a>.
+                    <br><b>Time Duration:</b> 1 hour
+                    <br><b>Input to Repair:</b> source code, test-suite (at least one failing test case)
                     <br> <b>Output:</b> 5 patch files in unified diff format for the original program
                   </div>
                 </div>
@@ -161,14 +165,14 @@
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Python
+                    Java
                   </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
-                    Benchmark programs will be generated from <a href="https://openai.com/blog/openai-codex">CodeX</a>.
-                    <br><b>Time Duration:</b> 15 minutes
-                    <br><b>Input to Repair:</b> LLM generated code, task description, test suite (with at least one failing)
+                    Benchmark programs will be selected from <a href="https://github.com/rjust/defects4j">Defects4J</a> and <a href="https://bears-bugs.github.io/bears-benchmark">Bears</a>.
+                    <br><b>Time Duration:</b> 1 hour
+                    <br><b>Input to Repair:</b> source code, test-suite (at least one failing test case)
                     <br> <b>Output:</b> 5 patch files in unified diff format for the original program
                   </div>
                 </div>
@@ -181,7 +185,6 @@
               If a tool becomes unresponsive after specified timeout (i.e. hangs) then the tool is killed after 5 min of wall time,
               and the resulting runtime is set to +5 minutes (specified timeout + 5).
             </p>
-
 
             <h4>Disclaimer</h4>
             <p>
