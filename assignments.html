@@ -145,6 +145,15 @@
                   N will differ for each track but consistent within all sub-tracks.
               </p>
 
+              <h4>Expected Output</h4>
+
+              <p>
+                  The repair tool should generate at most 5 patch files in <b>unified diff</b> format for the provided source code.
+                  The patch will be applied on the original source-code, those which fails to successfully apply will be considered invalid.
+                  Please ensure your repair driver places the generated patches in a subdirectory named <code>patches</code>
+                  within <code>self.output</code> directory.
+              </p>
+
             <h4>Sub Tracks</h4>
 
             <p>
@@ -165,7 +174,6 @@
                     <br><b>Demo Benchmark:</b> <a href="https://github.com/APR-Comp/education-c-benchmark">GitHub Repo</a>
                     <br><b>Time Duration:</b> 15 minutes
                     <br><b>Input to Repair:</b> student code, reference correct code, test suite (with at least one failing)
-                    <br> <b>Output:</b> At most 5 patch files in unified diff format for the provided source code
                   </div>
                 </div>
               </div>
@@ -181,7 +189,6 @@
                     <br><b>Demo Benchmark:</b> <a href="https://github.com/APR-Comp/education-python-benchmark">GitHub Repo</a>
                     <br><b>Time Duration:</b> 15 minutes
                     <br><b>Input to Repair:</b> student code, reference correct code, test suite (with at least one failing)
-                    <br> <b>Output:</b> At most 5 patch files in unified diff format for the provided source code
                   </div>
                 </div>
               </div>
