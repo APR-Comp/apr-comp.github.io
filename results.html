@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>APR-Comp 2024 | International Competition on Automated Program Repair</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- plugins -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+<!-- header -->
+<div w3-include-html="header.html"></div>
+
+<!-- details page -->
+<section class="pt-5">
+  <div class="container shadow section-sm rounded">
+    <div class="row">
+      <!-- sidebar -->
+      <div class="col-lg-3">
+        <ul class="sidenav">
+          <li title="about apr-comp" class="sidelist">
+            <a href="index.html">Overview</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="dates.html">Important Dates</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="jury.html">Competition Jury</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="rules.html">Competition Rules</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="tracks.html">Competition Tracks</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="submission.html">Submission</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="evaluation.html">Evaluation</a>
+          </li>
+
+
+
+          <li class="sidelist">
+            <a href="organizers.html">Organizers</a>
+          </li>
+
+          <li class="sidelist">
+            <a href="participants.html">Participants</a>
+          </li>
+
+          <li class="sidelist parent active">
+            <a href="results.html">Results</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- main -->
+      <div class="col-lg-8">
+        <div class="container">
+          <h2 class="section-title">Competition Results</h2>
+          <hr>
+          <p>
+            The first international competition for Automated Program Repair (APR), witnessed 15 repair tools with 10 participating tools and
+            5 baseline tools. The competition carried out 3 tracks focusing on 3 different repair tasks, each track had two sub-tracks focused on two
+            prominent programming languages in the domain. The competition altogether evaluated 475 unique repair tasks.
+          </p>
+
+          <h3 class="mb-4 font-weight-medium">Student Assignments</h3>
+          <!-- main content -->
+          <div class="content">
+            <p>
+              This track is focused on fixing incorrect student submissions for CS assignments evaluated with Introductory Programming courses.
+              Repair tools will be fixing student assignment to provide tailor-made feedback for the incorrect submission.
+            </p>
+            <br>
+            <h5>Python Sub-Track</h5>
+            <br>
+            <table class="table caption-top">
+              <thead>
+              <tr>
+                <th scope="col">Tool</th>
+                <th scope="col">Patches Generated</th>
+                <th scope="col">Incorrect Patches</th>
+                <th scope="col">Partially Correct Patches</th>
+                <th scope="col">Correct Patches</th>
+                <th scope="col">Score</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row">LLMR</th>
+                <td>434</td>
+                <td>26</td>
+                <td>41</td>
+                <td>367</td>
+                <td>339.6</td>
+              </tr>
+              <tr>
+                <th scope="row">Brafar</th>
+                <td>98</td>
+                <td>12</td>
+                <td>12</td>
+                <td>74</td>
+                <td>308</td>
+              </tr>
+              <tr>
+                <th scope="row">Refactory</th>
+                <td>32</td>
+                <td>6</td>
+                <td>3</td>
+                <td>23</td>
+                <td>92</td>
+              </tr>
+              </tbody>
+            </table>
+            <br>
+            <h5>C Sub-Track</h5>
+            <br>
+            <table class="table caption-top">
+              <thead>
+              <tr>
+                <th scope="col">Tool</th>
+                <th scope="col">Patches Generated</th>
+                <th scope="col">Incorrect Patches</th>
+                <th scope="col">Partially Correct Patches</th>
+                <th scope="col">Correct Patches</th>
+                <th scope="col">Score</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row">LLMR</th>
+                <td>311</td>
+                <td>160</td>
+                <td>7</td>
+                <td>144</td>
+                <td>153.3</td>
+              </tr>
+              <tr>
+                <th scope="row">VeriFix</th>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                <td>7</td>
+                <td>28</td>
+              </tr>
+              <tr>
+                <th scope="row">F1X</th>
+                <td>7</td>
+                <td>0</td>
+                <td>5</td>
+                <td>2</td>
+                <td>6</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="mb-4 font-weight-medium">AI Generated Code</h3>
+          <!-- main content -->
+          <div class="content">
+            <p>
+              This track is focused on fixing incorrectly generated code by CodeX for general algorithmic problems curated in <a href="https://leetcode.com/">LeetCode</a> .
+              Repair tools will be fixing LLM generated code which fails on provided test cases.
+            </p>
+            <br>
+            <h5>Java Sub-Track</h5>
+            <br>
+            <table class="table caption-top">
+              <thead>
+              <tr>
+                <th scope="col">Tool</th>
+                <th scope="col">Patches Generated</th>
+                <th scope="col">Incorrect Patches</th>
+                <th scope="col">Partially Correct Patches</th>
+                <th scope="col">Correct Patches</th>
+                <th scope="col">Score</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row">ARJA-E</th>
+                <td>25</td>
+                <td>0</td>
+                <td>0</td>
+                <td>25</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <th scope="row">ET</th>
+                <td>34</td>
+                <td>19</td>
+                <td>2</td>
+                <td>13</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <th scope="row">APRER</th>
+                <td>23</td>
+                <td>0</td>
+                <td>18</td>
+                <td>5</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <th scope="row">LLMR</th>
+                <td>25</td>
+                <td>25</td>
+                <td>0</td>
+                <td>0</td>
+                <td>-5.6</td>
+              </tr>
+              <tr>
+                <th scope="row">TBar</th>
+                <td>6</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td>-24</td>
+              </tr>
+              <tr>
+                <th scope="row">RepairLLAMA</th>
+                <td>381</td>
+                <td>379</td>
+                <td>1</td>
+                <td>1</td>
+                <td>-105.7</td>
+              </tr>
+              <tr>
+                <th scope="row">ARJA</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              </tbody>
+            </table>
+            <br>
+            <h5>Python Sub-Track</h5>
+            <br>
+            <table class="table caption-top">
+              <thead>
+              <tr>
+                <th scope="col">Tool</th>
+                <th scope="col">Patches Generated</th>
+                <th scope="col">Incorrect Patches</th>
+                <th scope="col">Partially Correct Patches</th>
+                <th scope="col">Correct Patches</th>
+                <th scope="col">Score</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row">RepairCATPython</th>
+                <td>56</td>
+                <td>0</td>
+                <td>56</td>
+                <td>0</td>
+                <td>16</td>
+              </tr>
+              <tr>
+                <th scope="row">Darjeeling</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">LLMR</th>
+                <td>477</td>
+                <td>401</td>
+                <td>12</td>
+                <td>64</td>
+                <td>-26.3</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="mb-4 font-weight-medium">Functional Errors</h3>
+          <!-- main content -->
+          <div class="content">
+            <p>
+              This track is focused on fixing functional correctness errors in real-world software programs.
+              Repair tools will be fixing bugs with a failing test-case, accompanied by a set of passing test cases from a real-world application.
+            </p>
+            <br>
+            <h5>Java Sub-Track</h5>
+            <br>
+            <table class="table caption-top">
+              <thead>
+              <tr>
+                <th scope="col">Tool</th>
+                <th scope="col">Patches Generated</th>
+                <th scope="col">Incorrect Patches</th>
+                <th scope="col">Partially Correct Patches</th>
+                <th scope="col">Correct Patches</th>
+                <th scope="col">Score</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row">ET</th>
+                <td>6</td>
+                <td>0</td>
+                <td>1</td>
+                <td>5</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <th scope="row">LLMR</th>
+                <td>5</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td>-2</td>
+              </tr>
+              <tr>
+                <th scope="row">RepairLLAMA</th>
+                <td>46</td>
+                <td>44</td>
+                <td>1</td>
+                <td>1</td>
+                <td>-31.67</td>
+              </tr>
+              <tr>
+                <th scope="row">TBar</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">ARJA</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">APRER</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">ARJA-E</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">RepairCatJava</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">GRT5</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              </tbody>
+            </table>
+            <br>
+            <h5>C Sub-Track</h5>
+            <br>
+            <table class="table caption-top">
+              <thead>
+              <tr>
+                <th scope="col">Tool</th>
+                <th scope="col">Patches Generated</th>
+                <th scope="col">Incorrect Patches</th>
+                <th scope="col">Partially Correct Patches</th>
+                <th scope="col">Correct Patches</th>
+                <th scope="col">Score</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row">F1X</th>
+                <td>10</td>
+                <td>0</td>
+                <td>0</td>
+                <td>10</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <th scope="row">Darjeeling</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">LLMR</th>
+                <td>5</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td>-1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!-- /details page -->
+
+
+
+<!-- footer -->
+<div w3-include-html="footer.html"></div>
+
+
+<!-- plugins -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/masonry/masonry.min.js"></script>
+<script src="plugins/clipboard/clipboard.min.js"></script>
+<script src="plugins/match-height/jquery.matchHeight-min.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+<script>
+  includeHTML();
+</script>
+<script>
+  includeHTML();
+</script>
+
+</body>
+</html>
